@@ -55,6 +55,9 @@ makes it easy to talk about the same things all day. We don't need to talk about
 project managers and objects when writing code. We can change the code that we write to match the way 
 we talk about what we are trying to do.
 
+One more definition related to ADTs. We create a specific object or a single block of memory related to an ADT
+we call that an instance of an ADT.
+
 Let's think about some of ADTs that might be in the Geoquakes lab. Another way to put this are what the objects in Geoquakes lab.
 
 Let's look at what [I came up with](https://github.com/den-wdi-1/oop-concepts/blob/master/geoquakes/scripts/app.js).
