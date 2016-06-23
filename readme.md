@@ -50,12 +50,14 @@ support OOP understand what it means for a property to defined as an ADT. We can
 redefine one object in terms of another later.
 
 So why do we care about ADTs if everything needs to be translated back into 1's and 0's. Humans don't 
-think in 1's and 0's. Giving something a more concrete name makes it much easier to work with. The way
-we describe things to someone who might . This person might need to be another developer but the 
+think in 1's and 0's. Giving something a more concrete name makes it much easier to work with. Using ADTs
+makes it easy to talk about the same things all day. We don't need to talk about earthquakes with our 
+project managers and objects when writing code. We can change the code that we write to match the way 
+we talk about what we are trying to do.
 
 Let's think about some of ADTs that might be in the Geoquakes lab. Another way to put this are what the objects in Geoquakes lab.
 
-Let's look at what [I came up with]().
+Let's look at what [I came up with](https://github.com/den-wdi-1/oop-concepts/blob/master/geoquakes/scripts/app.js).
 
 ### Encapsulation
 
@@ -72,7 +74,7 @@ information to set and change the position. For example, I could pass an address
 combination, or just some grid coordinates. The ADT has responsibility for deciding how to actually 
 store and manipulate the position once I've set it.
 
-Let's go back to the code and look more directly at how we encapsulated the [Geoquakes objects]().
+Let's go back to the code and look more directly at how we encapsulated the [Geoquakes objects](https://github.com/den-wdi-1/oop-concepts/blob/master/geoquakes/scripts/app.js).
 
 ### Inheritance and Polymorphism
 JavaScript inheritance is different from most languages. In most languages instances are born with type 
@@ -80,8 +82,8 @@ and die with type. They're like a turtle's shell. Take away the shell and you've
 In JavaScript, instance are more like hermit crabs, where the type is just the shell they're carrying
 around right now.
 
-![turle]()
-![hermit crab]() 
+<img src="https://github.com/den-wdi-1/oop-concepts/blob/master/images/turtle.jpg" width="300">
+<img src="https://github.com/den-wdi-1/oop-concepts/blob/master/images/hermit_crab.jpg" width="300">
 
 When we make a new Object, we're getting a new copy of the shell. If we use the literal notation, we
 saying take the ``Object`` shell add some new stuff and that's the ADT of my newly created instance.
@@ -120,6 +122,7 @@ daisy = {
     color: "white",
     petals: 64,
     smells: false
+    bloom: function(){ console.log("Look at me") }; 
 } 
 
 function Flower() {
@@ -128,6 +131,8 @@ function Flower() {
     this.smells= true;
  }
 
+Flower.prototype = { bloom: function(){ console.log("Look at me")}  }; 
+
 var rose = new Flower(); // Factory for shells
 var tulip = Object.create(rose); //Give me your shell.
 tulip.color = "yellow"
@@ -135,6 +140,7 @@ tulip.color = "yellow"
 Where are the following things defined? If it is defined in the object, saw the object name. If it's 
 defined in the prototype list object.prototype. If its defined in the prototype's prototype write object.prototype.prototype, etc. If it's not defined how many prototype's do you need to check?
 * rose.bloom? rose.prototype
+* rose.color?
 * tulip.color? 
 * tulip.petals?
 * tulip.bloom?
