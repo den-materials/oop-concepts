@@ -9,57 +9,85 @@ Market: SF
 
 ## Why is this important?
 <!-- framing the "why" in big-picture/real world examples -->
-Understanding OOP concepts gives us an excellent frame of reference for a lot of information that comes later in the course. OOP concepts provide the foundation for MVC architecture, Ruby classes, the structure of Rails apps and so much more. OOP design patterns give us an opinion about the way we architect our own applications. Simply put, understanding Object Oriented Programming will make us better developers.
+Understanding OOP concepts gives us an excellent frame of reference for a lot of information that comes later in the course. OOP concepts are the most common way that developers think about organizing code
+at a high level. OOP concepts help inform the MVC architecture, how frameworks liks Rails and React 
+are used to create apps and so much more. OOP design patterns give us an opinion about the way we architect our own applications. Simply put, understanding Object Oriented Programming will make us better developers.
 
-As we prepare for Project 1 browser games, OOP concepts like *inheritance, encapsulation, polymorphism and abstraction* can inform us as we break down complex problems into multiple smaller, simpler steps.
-
+As we prepare for Project 1 browser games, OOP concepts can give us some insight into how to break down complex problems into multiple smaller, simpler steps.
 
 ## What are the objectives?
 <!-- specific/measurable goal for students to achieve -->
 *After this workshop, developers will be able to:*
 
 - Refactor code with OOP concepts such as
-    - inheritance
     - encapsulation
     - abstraction
-    - polymorphism
-- Solve complex coding challeges by breaking them down into smaller tasks
-- Recognize, understand and write prototype functions and reusable helper methods
+- Recognize when objects can help in creating simpler tasks
+- Recognize, understand and write prototype functions
 
 ## Where should we be now?
 *Before this workshop, developers should already be able to:*
 
-- Code working solutions for projects of a complexity similar to the [tic-tac-toe](https://github.com/sf-wdi-29/tic-tac-toe) and [geoquakes](https://github.com/sf-wdi-29/geoquakes) labs.
-- Explain how basic object inheritance works in JavaScript
+- Code working solutions for projects of a complexity similar to the [tic-tac-toe](https://github.com/den-wdi-1/tic-tac-toe)
+and [geoquakes](https://github.com/den-wdi-1/geoquakes) labs.
+- Explain how to create objects in Javascript using literals and constructors.
 
 ## What is OOP?
+Object Oriented Programming(OOP) is one of the big progamming paradigms. It stretches across languages, 
+so you can talk about OOP in JavaScript, in Ruby, or C++. The primary benefit of OOP is providing a 
+common way for developers to talk about breaking down problems. It is a super deep area. At CU Denver,
+you can take a [graduate course](https://oneclass.com/#!/schools/university_of_colorado_denver/1489296-csci-5255)
+on OOP.
 
-Object Oriented Programming is one of the programming paradigms that evolved in response to [the software crisis](https://en.wikipedia.org/wiki/Software_crisis) of the late 1960's and early 1970's. (Another paradigm is called [Procedural Programming](http://study.com/academy/lesson/object-oriented-programming-vs-procedural-programming.html).) As computers became increasingly powerful, they were tasked with solving more and more complicated problems. Developers needed a system to organize their code in order to improve quality and work more efficiently.
+The basic idea behind OOP is to create Abstract Data Type(ADTs). ADTs are representations of concepts 
+that defined in terms that the computer can understand. An example is the flowers from this mornings. 
+What is the essence of rose to JavaScript? .... I don't know but I can try to build an understand by
+defining some properties that JavaScript does understand. 
 
-Here is a clear illustration of the main concepts that define Object Oriented Programming:
+We can even combine previous ADT's we've created in defining new ADT's. If we're trying to define a car 
+ADT and we've already defined a Tire ADT we can use the Tire ADT to define the Car ADT. Languages that 
+support OOP understand what it means for a property to defined as an ADT. We can even go back and 
+redefine one object in terms of another later.
 
-<figure>
-  <img src="https://atomicobject.com/uploadedImages/archive/images/ObjectModel.png" alt="Object Model">
-  <br>
-  <figcaption>A little bit overwhelming, right?</figcaption>
-</figure>
+So why do we care about ADTs if everything needs to be translated back into 1's and 0's. Humans don't 
+think in 1's and 0's. Giving something a more concrete name makes it much easier to work with. The way
+we describe things to someone who might . This person might need to be another developer but the 
 
-_Don't worry._ We don't need to absorb all of this today. The goal here is simply exposure, to make sure you recognize these words as OOP concepts and begin to develop a comfort with them. Today, we're going to look at four of these concepts in depth and discuss how they relate (or how they _DON'T_ relate) to JavaScript.
+Let's think about some of ADTs that might be in the Geoquakes lab. Another way to put this are what the objects in Geoquakes lab.
 
-#### Important Object Oriented Programming Concepts:
+Let's look at what [I came up with]().
 
->***Inheritance:*** objects can inherit features from other objects. 
->***Encapsulation:*** each object is responsible for specific tasks. Manage (minimize) dependencies
->***Abstraction:*** "focuses on the essential characteristics of some object relative to the viewer" (Grady)
->***Polymorphism:*** objects can share the same `interface` with other objects.
+### Encapsulation
 
-#### Inheritance and JavaScript
+Once we've identified some ADTs, our key responsibility is to make sure that someone only needs to 
+understand the properties and methods in our ADT to use our ADT. In other words we should be able to 
+write a once sentence description of any properties and methods in our ADT. This description 
 
-Of all the OOP concepts we could talk about, *inheritance* is probably the most easily understood in the context of JavaScript. That's because whereas OOP concepts were developed using strongly typed (aka classical) languages like C++, JavaScript was written (in 10 days) in 1995 using prototypal inheritance (instead of classes) and so inheritance happens by default with JavaScript's loosely-typed nature.
+Think about addition. Whoever wrote JavaScript needed to specify at the 1's and 0's level what it means
+to add two numbers. As a user of the JavaScript number ADT, I just need to know the method, ``+`` and 
+what number addition means to use the ADT.
 
-The basic idea is that any instance of an object inherits properties from its parent object or constructor.
+Another example. If I write a Car ADT that has the concept of position, I just need to give enough 
+information to set and change the position. For example, I could pass an address, or a lat/lng 
+combination, or just some grid coordinates. The ADT has responsibility for deciding how to actually 
+store and manipulate the position once I've set it.
 
-***Example:*** (This should be familiar.)
+Let's go back to the code and look more directly at how we encapsulated the [Geoquakes objects]().
+
+### Inheritance and Polymorphism
+JavaScript inheritance is different from most languages. In most languages instances are born with type 
+and die with type. They're like a turtle's shell. Take away the shell and you've taken away the turtle. 
+In JavaScript, instance are more like hermit crabs, where the type is just the shell they're carrying
+around right now.
+
+![turle]()
+![hermit crab]() 
+
+When we make a new Object, we're getting a new copy of the shell. If we use the literal notation, we
+saying take the ``Object`` shell add some new stuff and that's the ADT of my newly created instance.
+When we say ``Object.create(rose)``, we're saying to the ``rose`` instance, I like your shell, let 
+me have a copy of your shell, with one more piece of information, where I copied my shell. Using a 
+constructor is basically a factory for creating shells.
 
 ```js 
 function Flower() {
@@ -68,211 +96,62 @@ function Flower() {
     this.smells= true;
  }
 
-var tulip = new Flower();
+var tulip = new Flower(); // Factory for shells
+var rose = Object.create(tulip); //Give me your shell.
 ```
 
-We expect tulip to have the `color` red, 32 `petals` and `smells` to be true.
+Once we start using an object, we start by asking if the object itself has changed a property or 
+method. (Did the crab change it's own shell). If the object has changed it's property, we ask is the 
+property or method defined in the prototype of the object. (Was the property or method defined on the 
+source of the crab's shell.) If we can't find it in that prototype we ask is there another prototype 
+of the prototype, and so on. (Did the source of our shell copy their shell from somewhere else.) 
+Eventually we'll end up at the ``Object`` prototype which is pretty minimal. If we don't find it there
+ we return ``undefined``.
 
-We can describe the relationship between an object and its prototype by saying `tulip is-a Flower`. This heirarchical description (`is-a`) will become more relevant when we look at database relationships. We might say that a `user has-many posts`, for example.
+This ability to go up the prototype chain, let's you define hierarchies of ADTs. For example, we can 
+define a Vehicle ADT, then we can define a Car ADT that contains all of the Vehicle properties, and 
+methods but also contains some properties that are specific to cars, finally we might have Lamborghini 
+ADT that contains methods that are specific just to Lamborghini's.
 
+We'll come back to these hierarchies when talk about Ruby because they're built into Rails.
 
-***A Little Deeper:*** All functions in JS have a `prototype` attribute with the value of `Object` and a reference to its definition as a `constructor` method. Objects in JS do NOT have a `prototype` attribute, but they do have a `__proto__` getter and setter method that points to the base Object from which they all derive.
+```js 
+daisy = {
+    color: "white",
+    petals: 64,
+    smells: false
+} 
 
-```js
-typeof(Flower);     // expect ==> 'function'
-typeof(tulip);        // expect ==> 'object'
-
-Flower.prototype;  // expect ==> 'Object {constructor: function Flower() ...}'
-tulip.prototype;     // expect ==> 'undefined'
-
-// NOTE TO INSTRUCTORS:  DON'T SHOW THEM THIS!!!
-tulip.__proto__;    //  expect ==> 'Object {constructor: function Flower() ...}'
-
-```
-
-#### Check For Understanding:
-
-<details>
-  <summary>Can you prove that JavaScript is Loosely-typed?</summary>
-  ```js
-    var a = "I am a string";
-    typeof(a);    //  expect ==> 'string'
-
-    a = 7;
-    typeof(a);    //  expect ==> 'number'
-
-  ```
-</details>
-
-
-#### Encapsulation
-
-The Object Oriented Programming paradigm embraces the concept of encapsulation. An encapsulated object or function is one that is responsbile for a single, specific task. Sandi Metz wrote [a great book about Ruby](http://www.poodr.com/) that explains the value of this concept in excellent detail.
-
-It's important to point out that one very important purpose of encapsulation concerns data privacy, which is a little harder to implement in JavaScript, where privacy is primarily managed by scope. _(More on this in the section on *Abstraction*.)_
-
-That said, it is very popular in JavaScript to use utlility libraries and to write helper methods. These approaches promote code reuse, embracing the OOP concept of *encapsulation*.
-
-Instead of this:
-```js
-    $(document).on("ready", function() { 
-        $quakesList = $.ajax({
-            method: "GET",
-            url: weekly_quakes_endpoint
-        })
-        .done(function(data){
-
-           var earthquakes = data.features;
-
-            var source = $("#quakes-template").html();
-            template = Handlebars.compile(source);
-
-            var quakesTemplate = template({quakes: earthquakes});
-           
-            $("#info").append(quakesTemplate);
-
-            earthquakes.forEach(function(quake){
-                var tempLat = quake.geometry.coordinates[1];
-                var tempLng = quake.geometry.coordinates[0];
-                new google.maps.Marker({
-                    position: new google.maps.LatLng(tempLat, tempLng),
-                    map: map,
-                    title: quake.properties.title
-                });
-                
-            })
-
-        });
-    });
-```
-
-Consider this:
-```js
-
-    $(document).on("ready", function() {        
-        $quakesList = $.ajax({
-            method: "GET",
-            url: weekly_quakes_endpoint
-        })
-        .done(function(data){
-            onSuccess(data);
-        })
-        .fail(function(response){
-            console.log("Error: ", response);
-        });
-    });
-
-    function onSuccess(data){
-       var earthquakes = data.features;
-       createMarkers(earthquakes);
-       compileHandlebarsTemplate(earthquakes, "#info", "#quakes-template");
-    }
-
-    function createMarkers(locationArray){
-        locationArray.forEach(function(location){
-            var tempLat = location.geometry.coordinates[1];
-            var tempLng = location.geometry.coordinates[0];
-            new google.maps.Marker({
-                position: new google.maps.LatLng(tempLat, tempLng),
-                map: map,
-                title: location.properties.title
-            });
-            
-        })
-    }
-
-    function compileHandlebarsTemplate(data, targetHtml, targetScript){
-        var source = $(targetScript).html();
-        template = Handlebars.compile(source);
-
-        var dataTemplate = template({quakes: data});
-
-        $(targetHtml).append(dataTemplate);
-    }
-
-```
-
-It still needs work, but you can see that if we had another data set we could createMarkers and compile the data to another Handlebars template with just a few additional adjustments.
-
-#### ¿Comprendes Mendez?
-
-<details>
-  <summary>Can you suggest ways to further encapsulate this code?</summary>
-    - Replace `var earthquakes` in the `onSuccess()` method with a more generic variable name
-    - Figure out how to determine whether Latitude and Longitude are at index [1] or [0] in a given dataset
-    - Create a more generic property name for the Handlebars template and make sure that is used in the in-line Javascript
-    - More ideas...?
-</details>
-
-
-#### Abstraction
-
-OOP Abstraction is specifically talking about classes, which we don't really have in ES5 JavaScript. In classical languages, as I've mentioned, you typically define a class with private and public methods and variables.
-
-The basic idea of encapsulated data privacy is that some objects should have access to your data while others should not. In classically-typed languages, you often see public and private methods, or interface code separated from implementation code. The goal is to encapsulate or hide the details of implementation so your public class methods are more behavior driven.
-
-PRIVATE | PUBLIC 
------ |---- 
-Data | read/write access
-Private Functions | ADT Functions
-   | Constructors / Destructors
-
-_That's already more than you really need to know about abstraction, at this point._
-
-#### The relationship between Encapsulation and Abstraction
-
-<details>
-  <summary>What does ADT stand for, and why should we care?</summary>
-    ADT stands for Abstract Data Types. ADT functions are the specific functions we write in a class that give us its unique purpose for existence.
-</details>
-
-
-#### Polymorphism
-
-The word Polymorphism describes the ability for OOP objects to take different shapes. A little less obvious is the fact that OOP objects should be modular. Later in this cohort we will import the same resource into multiple JavaScript files and use that resource for different purposes. For example, we might have user.posts and user.comments. Both need to import the core User model but they will endow the user with different behaviors.
-
-Here's a more literal example to _illustrate_ polymorphism, except it mainly _demonstrates_ inheritance.
-
-
-```js
-function Polygon() {
-    this.width = b;
-    this.height = h;
-    this.hasArea = true;
+function Flower() {
+    this.color = "red";
+    this.petals = 32;
+    this.smells= true;
  }
 
-var rectangle = new Polygon();
-rectangle.sides = 4;
-rectangle.area = b * h;
-
-var triangle = new Polygon();
-triangle.sides = 3;
-triangle.area = b * h / 2;
-
-
+var rose = new Flower(); // Factory for shells
+var tulip = Object.create(rose); //Give me your shell.
+tulip.color = "yellow"
 ```
+Where are the following things defined? If it is defined in the object, saw the object name. If it's 
+defined in the prototype list object.prototype. If its defined in the prototype's prototype write object.prototype.prototype, etc. If it's not defined how many prototype's do you need to check?
+* rose.bloom? rose.prototype
+* tulip.color? 
+* tulip.petals?
+* tulip.bloom?
+* daisy.color?
+* daisy.watered?
+* rose.watered?
+* tulip.watered?
 
-A rectangle and a triangle are both polygons but they are not identical.
+## Lab
 
- 
-### Check for Understanding
-
-<details>
-  <summary>Brainstorm another example of how you might use polymorphism in JavaScript.</summary>
-  - Objects should be modular
-  - Objects with different implementations can share the same interface
-  - There is some conceptual similarity between inheritance and polymorphism
-</details>
-
-## Practice
-
->***Note:*** *This can be a pair programming activity or done independently.*
-
-- Pick a strong solution from either the [geoquakes](https://github.com/sf-wdi-29/geoquakes) or [tic-tac-toe](https://github.com/sf-wdi-29/tic-tac-toe) mini-projects.
-- Identify the main object from which all the others are derived
-- Apply as many OOP concepts as you can to refactor the code without breaking it
-- A great approach is to write a series of helper methods that you can call from anywhere within your application
-
+Take your solution from the [tic-tac-toe](https://github.com/den-wdi-1/tic-tac-toe) mini-project.
+- Identify some ADTs(objects) that might be present in your solution. 
+    - Add the names of the ADTs to an ``adts.txt`` file.
+    - Push the change back to Github
+- Create a constructor for each ADT you think you identified in the ``adts.txt``
+    - Refactor your code to use the constructor and any methods you defined on your ADT
+- If you find a new ADT while doing this, Great!, add it back to the ``adts.txt`` and include those changes in your commit. 
 
 ## Additional Resources
 - [Object Oriented Analysis and Design with Applications, by Grady Booch and others](http://www.goodreads.com/book/show/424923.Object_Oriented_Analysis_and_Design_with_Applications)
