@@ -168,3 +168,7 @@ Take your solution from the [tic-tac-toe](https://github.com/den-wdi-1/tic-tac-t
 - [OOP in JS from JavascriptIsSexy](http://javascriptissexy.com/oop-in-javascript-what-you-need-to-know/)
 - [Javascript, The Good Parts](http://www.goodreads.com/book/show/2998152-javascript)
 - [Practical Object Oriented Design in Ruby, by Sandi Metz](http://www.poodr.com/)
+
+## Licensing
+All content is licensed under a CC­BY­NC­SA 4.0 license.
+All software code is licensed under GNU GPLv3. For commercial use or alternative licensing, please contact legal@ga.co.
