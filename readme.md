@@ -70,36 +70,60 @@ Let's look at what [I came up with](https://github.com/den-wdi-1/oop-concepts/bl
 ### Encapsulation
 
 Once we've identified some ADTs, our key responsibility is to make sure that someone only needs to 
-understand the properties and methods in our ADT to use our ADT. In other words we should be able to 
-write a once sentence description of any properties and methods in our ADT. This description 
+understand the properties and methods in our ADT to use our ADT. In other words, we should be able to 
+write a one-sentence description of any properties and methods in our ADT.
 
-Think about addition. Whoever wrote JavaScript needed to specify at the 1's and 0's level what it means
-to add two numbers. As a user of the JavaScript number ADT, I just need to know the method, ``+`` and 
-what number addition means to use the ADT.
+Think about addition. Whoever wrote JavaScript needed to specify at the 1s and 0s level what it means
+to add two numbers. I don't need to understand that.
+As a user of the JavaScript number ADT, I just need to know the method, ``+`` and 
+what number addition means to the number ADT.
 
 Another example. If I write a Car ADT that has the concept of position, I just need to give enough 
 information to set and change the position. For example, I could pass an address, or a lat/lng 
 combination, or just some grid coordinates. The ADT has responsibility for deciding how to actually 
 store and manipulate the position once I've set it.
 
+With these examples in mind, we can define [**encapsulation**](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)#General_definition) as *the bundling of data with the methods that operate on that data in order to hide the internal values or state of an object*.
+
+<!--CFU: Does this remind you of any other coding paradigm we've discussed so far?  (To me it sounds like an API) -->
+
+<!--Again, need to replace with LOTR -->
+
 Let's go back to the code and look more directly at how we encapsulated the [Geoquakes objects](https://github.com/den-wdi-1/oop-concepts/blob/master/geoquakes/scripts/app.js).
 
 ### Inheritance and Polymorphism
-JavaScript inheritance is different from most languages. In most languages instances are born with type 
-and die with type. They're like a turtle's shell. Take away the shell and you've taken away the turtle. 
-In JavaScript, instance are more like hermit crabs, where the type is just the shell they're carrying
-around right now.
 
-<img src="https://github.com/den-wdi-1/oop-concepts/blob/master/images/turtle.jpg" width="300">
-<img src="https://github.com/den-wdi-1/oop-concepts/blob/master/images/hermit_crab.jpg" width="300">
+JavaScript **inheritance** is different from most languages. In most languages, **instances** are born with a type 
+and die with that type. They're like a turtle. Take away the shell and you've taken away the turtle. 
+In JavaScript, instances are more like hermit crabs, where the type is just the shell they're carrying
+around right now. Also, like hermit crabs, we can keep the structure of our shell, but decorate it with
+our own style.
 
-When we make a new Object, we're getting a new copy of the shell. If we use the literal notation, we
-saying take the ``Object`` shell add some new stuff and that's the ADT of my newly created instance.
-When we say ``Object.create(rose)``, we're saying to the ``rose`` instance, I like your shell, let 
-me have a copy of your shell, with one more piece of information, where I copied my shell. Using a 
-constructor is basically a factory for creating shells.
+<img src="images/turtle.jpg" width="30%">
+<img src="images/hermit_crab.jpg" width="30%">
+<img src="images/hello-kitty-hc.jpg" width="30%">
+
+When we make a new Object, we're getting a new copy of the shell, from an existing **prototype**.
+
+<!--Walk through all three of these in the console, using Object.getPrototypeOf()-->
+
+If we use the literal notation, we are saying take the ``Object`` shell as my **prototype** and
+add some new stuff: that's the ADT of my newly created instance.
+
+Using a constructor is basically a factory for creating similar shells, from the same **prototype**.
+
+When we say ``Object.create(tulip)``, we're saying to the ``tulip`` instance, I like your shell, let 
+me use it as a **prototype** for my shell.
 
 ```js 
+
+daisy = {
+    color: "white",
+    petals: 64,
+    smells: false,
+    bloom: function(){ console.log("Look at me"); } 
+} 
+
 function Flower() {
     this.color = "red";
     this.petals = 32;
@@ -110,27 +134,27 @@ var tulip = new Flower(); // Factory for shells
 var rose = Object.create(tulip); //Give me your shell.
 ```
 
-Once we start using an object, we start by asking if the object itself has changed a property or 
-method. (Did the crab change it's own shell). If the object has changed it's property, we ask is the 
-property or method defined in the prototype of the object. (Was the property or method defined on the 
-source of the crab's shell.) If we can't find it in that prototype we ask is there another prototype 
-of the prototype, and so on. (Did the source of our shell copy their shell from somewhere else.) 
-Eventually we'll end up at the ``Object`` prototype which is pretty minimal. If we don't find it there
- we return ``undefined``.
+Once we start using an object, we start by asking if the object itself has changed or created a property or 
+method. (Did the crab change its own shell?) If the object has not changed its property, we ask if the 
+property or method is defined in the prototype of the object. (Was the property or method defined on the 
+source of the crab's shell?) If we can't find it in that prototype we ask is there another prototype 
+of the prototype, and so on. (Did the source of our shell copy their shell from somewhere else?) 
+Eventually we'll end up at the ``Object`` prototype which is pretty minimal. If we don't find it there,
+ we finally return ``undefined``.
 
-This ability to go up the prototype chain, let's you define hierarchies of ADTs. For example, we can 
-define a Vehicle ADT, then we can define a Car ADT that contains all of the Vehicle properties, and 
-methods but also contains some properties that are specific to cars, finally we might have Lamborghini 
-ADT that contains methods that are specific just to Lamborghini's.
+This ability to go up the prototype chain lets you define hierarchies of ADTs. For example, we can 
+define a Vehicle ADT, then we can define a Car ADT that contains all of the Vehicle properties and 
+methods, but also contains some properties that are specific to cars, finally we might have a
+Lamborghini ADT that contains methods that are specific to Lamborghinis.
 
-We'll come back to these hierarchies when talk about Ruby because they're built into Rails.
+Returning to flowers, let us define some properties and methods:
 
 ```js 
 daisy = {
     color: "white",
     petals: 64,
-    smells: false
-    bloom: function(){ console.log("Look at me") }; 
+    smells: false,
+    bloom: function(){ console.log("Look at me"); } 
 } 
 
 function Flower() {
@@ -145,9 +169,11 @@ var rose = new Flower(); // Factory for shells
 var tulip = Object.create(rose); //Give me your shell.
 tulip.color = "yellow"
 ```
-Where are the following things defined? If it is defined in the object, saw the object name. If it's 
-defined in the prototype list object.prototype. If its defined in the prototype's prototype write object.prototype.prototype, etc. If it's not defined how many prototype's do you need to check?
-* rose.bloom? rose.prototype
+
+Where are the following things defined? If it is defined in the object, say the object name. If it's 
+defined in the prototype list objectName.prototype. If it is defined in the prototype's prototype write objectName.prototype.prototype, etc. If it's not defined how many prototypes did you need to check?
+
+* rose.bloom? `=> rose.prototype`
 * rose.color?
 * tulip.color? 
 * tulip.petals?
@@ -171,11 +197,11 @@ in your own words, without using any of the words in the list:
 
 ## Lab
 
-Take your solution from the [tic-tac-toe](https://github.com/den-wdi-1/tic-tac-toe) mini-project.
+Take your solution from the [tic-tac-toe](https://github.com/den-wdi-2/tic-tac-toe) mini-project.
 - Identify some ADTs(objects) that might be present in your solution. 
     - Add the names of the ADTs to an ``adts.txt`` file.
     - Push the change back to Github
-- Create a constructor for each ADT you think you identified in the ``adts.txt``
+- Create a constructor in your Javascript code for each ADT you identified
     - Refactor your code to use the constructor and any methods you defined on your ADT
 - If you find a new ADT while doing this, Great!, add it back to the ``adts.txt`` and include those changes in your commit. 
 
