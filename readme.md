@@ -10,55 +10,60 @@ Market: SF
 ## Why is this important?
 <!-- framing the "why" in big-picture/real world examples -->
 Understanding OOP concepts gives us an excellent frame of reference for a lot of information that comes later in the course. OOP concepts are the most common way that developers think about organizing code
-at a high level. OOP concepts help inform the MVC architecture, how frameworks liks Rails and React 
-are used to create apps and so much more. OOP design patterns give us an opinion about the way we architect our own applications. Simply put, understanding Object Oriented Programming will make us better developers.
+at a high level. OOP concepts help inform the MVC architecture, how frameworks like React 
+are used to create apps, and so much more. OOP design patterns give us an opinion about the way we architect our own applications. Simply put, understanding Object Oriented Programming will make us better developers.
 
-As we prepare for Project 1 browser games, OOP concepts can give us some insight into how to break down complex problems into multiple smaller, simpler steps.
+As we prepare for Project 1 browser games, OOP concepts can give us a way to break down complex problems into multiple smaller, simpler steps.
 
 ## What are the objectives?
 <!-- specific/measurable goal for students to achieve -->
 *After this workshop, developers will be able to:*
 
-- Refactor code with OOP concepts such as
+- **Refactor** code with OOP concepts such as
     - encapsulation
     - abstraction
-- Recognize when objects can help in creating simpler tasks
-- Recognize, understand and write prototype functions
+    - inheritance
+- **Recognize** when objects can help in creating simpler tasks
+- **Recognize**, **understand** and **write** prototype functions
 
 ## Where should we be now?
 *Before this workshop, developers should already be able to:*
 
-- Code working solutions for projects of a complexity similar to the [tic-tac-toe](https://github.com/den-wdi-1/tic-tac-toe)
-and [geoquakes](https://github.com/den-wdi-1/geoquakes) labs.
-- Explain how to create objects in Javascript using literals and constructors.
+- **Code** working solutions for projects of a complexity similar to the [tic-tac-toe](https://github.com/den-wdi-1/tic-tac-toe) lab.
+- **Explain** how to create objects in Javascript using literals and constructors.
 
 ## What is OOP?
 Object Oriented Programming(OOP) is one of the big progamming paradigms. It stretches across languages, 
-so you can talk about OOP in JavaScript, in Ruby, or C++. The primary benefit of OOP is providing a 
-common way for developers to talk about breaking down problems. It is a super deep area. At CU Denver,
+so you can talk about OOP in JavaScript, in Ruby, or even C++. The primary benefit of OOP is providing a 
+common way for developers to talk about breaking down problems. It is a very deep area. At CU Denver,
 you can take a [graduate course](https://oneclass.com/#!/schools/university_of_colorado_denver/1489296-csci-5255)
 on OOP.
 
-The basic idea behind OOP is to create Abstract Data Type(ADTs). ADTs are representations of concepts 
-that defined in terms that the computer can understand. An example is the flowers from this mornings. 
-What is the essence of rose to JavaScript? .... I don't know but I can try to build an understand by
-defining some properties that JavaScript does understand. 
+The basic idea behind OOP is to create **Abstract Data Types** (**ADTs**). **ADTs** are 
+representations of concepts defined in terms that the computer can understand.
+An example can be made of the flowers from earlier. What is the essence of a rose to 
+JavaScript? .... I don't know but I can try to build an understanding by defining some properties
+that JavaScript does understand. 
 
-We can even combine previous ADT's we've created in defining new ADT's. If we're trying to define a car 
-ADT and we've already defined a Tire ADT we can use the Tire ADT to define the Car ADT. Languages that 
-support OOP understand what it means for a property to defined as an ADT. We can even go back and 
-redefine one object in terms of another later.
+We can even combine previous ADTs we've created to define new ADTs. If we're trying to define a car 
+ADT, and we've already defined a Tire ADT we can use the Tire ADT to heldefine the Car ADT. We can 
+even go back and redefine one object in terms of another later.
 
-So why do we care about ADTs if everything needs to be translated back into 1's and 0's. Humans don't 
-think in 1's and 0's. Giving something a more concrete name makes it much easier to work with. Using ADTs
-makes it easy to talk about the same things all day. We don't need to talk about earthquakes with our 
-project managers and objects when writing code. We can change the code that we write to match the way 
-we talk about what we are trying to do.
+So why do we care about ADTs if everything needs to be translated back into 1s and 0s anyway? Well,
+humans don't think in 1s and 0s. Giving something a more concrete name makes it much easier to
+work with. Using ADTs makes it easy to talk about the same things all day. We don't need to talk
+about *flowers* with our project managers and *objects* when writing code. We can change the code
+that we write to match the way we talk to humans about what we are trying to do.
 
-One more definition related to ADTs. We create a specific object or a single block of memory related to an ADT
-we call that an instance of an ADT.
+Let's define one more term related to ADTs. When we create a specific object or allocate a single
+block of memory related to an ADT, we call that an **instance** of an ADT.
 
-Let's think about some of ADTs that might be in the Geoquakes lab. Another way to put this are what the objects in Geoquakes lab.
+### Refactoring Part 1
+
+Let's think about some ADTs that might be in the LOTR lab. Another way to put this is, "What are the
+objects in the LOTR lab?"
+
+<!--This needs to be replaced with LOTR or something else we've done -->
 
 Let's look at what [I came up with](https://github.com/den-wdi-1/oop-concepts/blob/master/geoquakes/scripts/app.js).
 
@@ -151,6 +156,18 @@ defined in the prototype list object.prototype. If its defined in the prototype'
 * daisy.watered?
 * rose.watered?
 * tulip.watered?
+
+### Vocab Check
+
+<!--CFU: Catch-phrase -->
+
+We have brought up a lot of new terms in this class.  Pair up, and try to describe these terms
+in your own words, without using any of the words in the list:
+
+- ADT
+- Instance
+- Encapsulation
+- Inheritance
 
 ## Lab
 
