@@ -5,15 +5,19 @@ Market: SF
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
-# Going Deeper with OOP Concepts and JavaScript
+<!--2:00 5 minutes -->
+
+<!--Opening: OK, so we just dove really deeply into objects in JS and Object-Oriented Programming.  Now we're going to pull back and explain this on a more conceptual level.  So without further ado, let's start putting some names to all of those things we talked about earlier.-->
+
+# Strengthening OOP Concepts and JavaScript
 
 ## Why is this important?
 <!-- framing the "why" in big-picture/real world examples -->
-Understanding OOP concepts gives us an excellent frame of reference for a lot of information that comes later in the course. OOP concepts are the most common way that developers think about organizing code
-at a high level. OOP concepts help inform the MVC architecture, how frameworks like React 
-are used to create apps, and so much more. OOP design patterns give us an opinion about the way we architect our own applications. Simply put, understanding Object Oriented Programming will make us better developers.
-
-As we prepare for Project 1 browser games, OOP concepts can give us a way to break down complex problems into multiple smaller, simpler steps.
+- Understanding OOP concepts gives us an excellent frame of reference for a lot of information that comes later in the course. - OOP concepts are the most common way that developers think about organizing code at a high level.
+- OOP concepts help inform the MVC architecture, how frameworks like React are used to create apps, and so much more.
+- OOP design patterns give us an opinion about the way we architect our own applications.
+- As we prepare for Project 1 browser games, OOP concepts can give us a way to break down complex problems into multiple smaller, simpler steps.
+- Simply put, understanding Object Oriented Programming will make us better developers.
 
 ## What are the objectives?
 <!-- specific/measurable goal for students to achieve -->
@@ -31,6 +35,8 @@ As we prepare for Project 1 browser games, OOP concepts can give us a way to bre
 
 - **Code** working solutions for projects of a complexity similar to the [tic-tac-toe](https://github.com/den-wdi-1/tic-tac-toe) lab.
 - **Explain** how to create objects in Javascript using literals and constructors.
+
+<!--2:05 5 minutes -->
 
 ## What is OOP?
 Object Oriented Programming(OOP) is one of the big progamming paradigms. It stretches across languages, 
@@ -58,6 +64,8 @@ that we write to match the way we talk to humans about what we are trying to do.
 Let's define one more term related to ADTs. When we create a specific object or allocate a single
 block of memory related to an ADT, we call that an **instance** of an ADT.
 
+<!--2:10 10 minutes -->
+
 ### Refactoring Part 1
 
 Let's think about some ADTs that might be in the LOTR lab. Another way to put this is, "What are the
@@ -66,6 +74,8 @@ objects in the LOTR lab?"
 <!--This needs to be replaced with LOTR or something else we've done -->
 
 Let's look at what [I came up with](https://github.com/den-wdi-1/oop-concepts/blob/master/geoquakes/scripts/app.js).
+
+<!--2:20 10 minutes -->
 
 ### Encapsulation
 
@@ -90,6 +100,8 @@ With these examples in mind, we can define [**encapsulation**](https://en.wikipe
 <!--Again, need to replace with LOTR -->
 
 Let's go back to the code and look more directly at how we encapsulated the [Geoquakes objects](https://github.com/den-wdi-1/oop-concepts/blob/master/geoquakes/scripts/app.js).
+
+<!--2:30 10 minutes -->
 
 ### Inheritance and Polymorphism
 
@@ -147,6 +159,10 @@ define a Vehicle ADT, then we can define a Car ADT that contains all of the Vehi
 methods, but also contains some properties that are specific to cars, finally we might have a
 Lamborghini ADT that contains methods that are specific to Lamborghinis.
 
+<!-- 2:40 5 minutes -->
+
+### Challenge
+
 Returning to flowers, let us define some properties and methods:
 
 ```js 
@@ -183,6 +199,8 @@ defined in the prototype list objectName.prototype. If it is defined in the prot
 * rose.watered?
 * tulip.watered?
 
+<!-- 2:45 5 minutes -->
+
 ### Vocab Check
 
 <!--CFU: Catch-phrase -->
@@ -194,6 +212,8 @@ in your own words, without using any of the words in the list:
 - Instance
 - Encapsulation
 - Inheritance
+
+<!--3:00 -->
 
 ## Lab
 
