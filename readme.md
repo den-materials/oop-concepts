@@ -23,17 +23,17 @@ Market: SF
 <!-- specific/measurable goal for students to achieve -->
 *After this workshop, developers will be able to:*
 
+- **Recognize** when objects can help in creating simpler tasks
+- **Recognize**, **understand** and **write** prototype functions
 - **Refactor** code with OOP concepts such as
     - encapsulation
     - abstraction
     - inheritance
-- **Recognize** when objects can help in creating simpler tasks
-- **Recognize**, **understand** and **write** prototype functions
 
 ## Where should we be now?
 *Before this workshop, developers should already be able to:*
 
-- **Code** working solutions for projects of a complexity similar to the [tic-tac-toe](https://github.com/den-wdi-1/tic-tac-toe) lab.
+- **Code** working solutions for projects of a complexity similar to the [tic-tac-toe](https://github.com/den-wdi-2/tic-tac-toe) lab.
 - **Explain** how to create objects in Javascript using literals and constructors.
 
 <!--2:05 5 minutes -->
@@ -43,7 +43,7 @@ Object Oriented Programming(OOP) is one of the big progamming paradigms. It stre
 so you can talk about OOP in JavaScript, in Ruby, or even C++. The primary benefit of OOP is providing a 
 common way for developers to talk about breaking down problems. It is a very deep area. At CU Denver,
 you can take a [graduate course](https://oneclass.com/#!/schools/university_of_colorado_denver/1489296-csci-5255)
-on OOP.
+solely on OOP.
 
 The basic idea behind OOP is to create **Abstract Data Types** (**ADTs**). **ADTs** are 
 representations of concepts defined in terms that the computer can understand.
@@ -52,7 +52,7 @@ JavaScript? .... I don't know but I can try to build an understanding by definin
 that JavaScript does understand. 
 
 We can even combine previous ADTs we've created to define new ADTs. If we're trying to define a car 
-ADT, and we've already defined a Tire ADT we can use the Tire ADT to heldefine the Car ADT. We can 
+ADT, and we've already defined a Tire ADT we can use the Tire ADT to help define the Car ADT. We can 
 even go back and redefine one object in terms of another later.
 
 So why do we care about ADTs if everything needs to be translated back into 1s and 0s anyway? Well,
@@ -117,8 +117,6 @@ our own style.
 
 When we make a new Object, we're getting a new copy of the shell, from an existing **prototype**.
 
-<!--Walk through all three of these in the console, using Object.getPrototypeOf()-->
-
 If we use the literal notation, we are saying take the ``Object`` shell as my **prototype** and
 add some new stuff: that's the ADT of my newly created instance.
 
@@ -126,6 +124,8 @@ Using a constructor is basically a factory for creating similar shells, from the
 
 When we say ``Object.create(tulip)``, we're saying to the ``tulip`` instance, I like your shell, let 
 me use it as a **prototype** for my shell.
+
+<!--Walk through all three of these in the console, using Object.getPrototypeOf()-->
 
 ```js 
 
