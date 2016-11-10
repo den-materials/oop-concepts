@@ -148,7 +148,7 @@ property or method is defined in the prototype of the object. (Was the property 
 source of the crab's shell?) If we can't find it in that prototype we ask is there another prototype 
 of the prototype, and so on. (Did the source of our shell copy their shell from somewhere else?) 
 Eventually we'll end up at the ``Object`` prototype which is pretty minimal. If we don't find it there,
- we finally return ``undefined``.
+ we finally return ``null``.
 
 This ability to go up the prototype chain lets you define hierarchies of ADTs. For example, we can 
 define a Vehicle ADT, then we can define a Car ADT that contains all of the Vehicle properties and 
