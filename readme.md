@@ -73,7 +73,7 @@ objects in the LOTR lab?"
 
 <!--This needs to be replaced with LOTR or something else we've done -->
 
-Let's look at what [I came up with](https://github.com/den-wdi-1/oop-concepts/blob/master/geoquakes/scripts/app.js).
+Let's look at what [I came up with](https://github.com/den-wdi-2/dom-manipulation-lotr-lab/blob/oop-refactor/solution-code/app/scripts/fellowship.js).
 
 <!--2:20 10 minutes -->
 
@@ -96,10 +96,6 @@ store and manipulate the position once I've set it.
 With these examples in mind, we can define [**encapsulation**](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)#General_definition) as *the bundling of data with the methods that operate on that data in order to hide the internal values or state of an object*.
 
 <!--CFU: Does this remind you of any other coding paradigm we've discussed so far?  (To me it sounds like an API) -->
-
-<!--Again, need to replace with LOTR -->
-
-Let's go back to the code and look more directly at how we encapsulated the [Geoquakes objects](https://github.com/den-wdi-1/oop-concepts/blob/master/geoquakes/scripts/app.js).
 
 <!--2:30 10 minutes -->
 
