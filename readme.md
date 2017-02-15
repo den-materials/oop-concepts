@@ -5,7 +5,7 @@ Market: SF
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
-<!--2:00 5 minutes -->
+<!--11:40 5 minutes -->
 
 <!--Opening: OK, so we just dove really deeply into objects in JS and Object-Oriented Programming.  Now we're going to pull back and explain this on a more conceptual level.  So without further ado, let's start putting some names to all of those things we talked about earlier.-->
 
@@ -36,7 +36,7 @@ Market: SF
 - **Code** working solutions for projects of a complexity similar to the [tic-tac-toe](https://github.com/den-wdi-2/tic-tac-toe) lab.
 - **Explain** how to create objects in Javascript using literals and constructors.
 
-<!--2:05 5 minutes -->
+<!--11:45 5 minutes -->
 
 ## What is OOP?
 Object Oriented Programming(OOP) is one of the big progamming paradigms. It stretches across languages, 
@@ -64,18 +64,16 @@ that we write to match the way we talk to humans about what we are trying to do.
 Let's define one more term related to ADTs. When we create a specific object or allocate a single
 block of memory related to an ADT, we call that an **instance** of an ADT.
 
-<!--2:10 10 minutes -->
+<!--11:50 10 minutes -->
 
 ### Refactoring Part 1
 
 Let's think about some ADTs that might be in the LOTR lab. Another way to put this is, "What are the
 objects in the LOTR lab?"
 
-<!--This needs to be replaced with LOTR or something else we've done -->
+Let's look at what [I came up with](https://github.com/den-materials/dom-manipulation-lotr-lab/blob/oop-refactor/solution-code/app/scripts/fellowship.js).
 
-Let's look at what [I came up with](https://github.com/den-wdi-2/dom-manipulation-lotr-lab/blob/oop-refactor/solution-code/app/scripts/fellowship.js).
-
-<!--2:20 10 minutes -->
+<!--12:00 10 minutes -->
 
 ### Encapsulation
 
@@ -97,7 +95,7 @@ With these examples in mind, we can define [**encapsulation**](https://en.wikipe
 
 <!--CFU: Does this remind you of any other coding paradigm we've discussed so far?  (To me it sounds like an API) -->
 
-<!--2:30 10 minutes -->
+<!--12:10 10 minutes -->
 
 ### Inheritance and Polymorphism
 
@@ -155,7 +153,7 @@ define a Vehicle ADT, then we can define a Car ADT that contains all of the Vehi
 methods, but also contains some properties that are specific to cars, finally we might have a
 Lamborghini ADT that contains methods that are specific to Lamborghinis.
 
-<!-- 2:40 5 minutes -->
+<!-- 12:20 5 minutes -->
 
 ### Challenge
 
@@ -195,7 +193,7 @@ defined in the prototype list objectName.prototype. If it is defined in the prot
 * rose.watered?
 * tulip.watered?
 
-<!-- 2:45 5 minutes -->
+<!-- 12:25 5 minutes -->
 
 ### Vocab Check
 
@@ -209,11 +207,11 @@ in your own words, without using any of the words in the list:
 - Encapsulation
 - Inheritance
 
-<!--3:00 -->
+<!--1:30 -->
 
 ## Lab
 
-Take your solution from the [tic-tac-toe](https://github.com/den-wdi-2/tic-tac-toe) mini-project.
+Take your solution from the [tic-tac-toe](https://github.com/den-materials/tic-tac-toe) mini-project.
 - Identify some ADTs(objects) that might be present in your solution. 
     - Add the names of the ADTs to an ``adts.txt`` file.
     - Push the change back to Github
