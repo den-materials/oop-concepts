@@ -3,8 +3,11 @@ Creator: Ben Hulan
 Market: SF
 -->
 
+<!--I think we need to find a new way to teach this lesson--keep all the vocab sections in, but push more towards cars (better prototype analogy, and try to avoid Object.create() -->
+
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
+<!--Actually 1:35 -->
 <!--11:40 5 minutes -->
 
 <!--Opening: OK, so we just dove really deeply into objects in JS and Object-Oriented Programming.  Now we're going to pull back and explain this on a more conceptual level.  So without further ado, let's start putting some names to all of those things we talked about earlier.-->
@@ -36,6 +39,7 @@ Market: SF
 - **Code** working solutions for projects of a complexity similar to the [tic-tac-toe](https://github.com/den-wdi-2/tic-tac-toe) lab.
 - **Explain** how to create objects in Javascript using literals and constructors.
 
+<!--Actually 1:40 -->
 <!--11:45 5 minutes -->
 
 ## What is OOP?
@@ -64,6 +68,7 @@ that we write to match the way we talk to humans about what we are trying to do.
 Let's define one more term related to ADTs. When we create a specific object or allocate a single
 block of memory related to an ADT, we call that an **instance** of an ADT.
 
+<!--Actually 1:44 -->
 <!--11:50 10 minutes -->
 
 ### Refactoring Part 1
@@ -94,6 +99,8 @@ store and manipulate the position once I've set it.
 With these examples in mind, we can define [**encapsulation**](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)#General_definition) as *the bundling of data with the methods that operate on that data in order to hide the internal values or state of an object*.
 
 <!--CFU: Does this remind you of any other coding paradigm we've discussed so far?  (To me it sounds like an API) -->
+
+<!--1:54 -->
 
 <!--12:10 10 minutes -->
 
@@ -153,6 +160,7 @@ define a Vehicle ADT, then we can define a Car ADT that contains all of the Vehi
 methods, but also contains some properties that are specific to cars, finally we might have a
 Lamborghini ADT that contains methods that are specific to Lamborghinis.
 
+<!--Actually 2:18 -->
 <!-- 12:20 5 minutes -->
 
 ### Challenge
@@ -193,6 +201,7 @@ defined in the prototype list objectName.prototype. If it is defined in the prot
 * rose.watered?
 * tulip.watered?
 
+<!--Actually 2:39 -->
 <!-- 12:25 5 minutes -->
 
 ### Vocab Check
