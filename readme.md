@@ -3,8 +3,6 @@ Creator: Ben Hulan
 Market: SF
 -->
 
-<!--I think we need to find a new way to teach this lesson--keep all the vocab sections in, but push more towards cars (better prototype analogy, and try to avoid Object.create() -->
-
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
 <!--Actually 1:35 -->
@@ -123,9 +121,6 @@ add some new stuff: that's the ADT of my newly created instance.
 
 Using a constructor is basically a factory for creating similar shells, from the same **prototype**.
 
-When we say ``Object.create(tulip)``, we're saying to the ``tulip`` instance, I like your shell, let 
-me use it as a **prototype** for my shell.
-
 <!--Walk through all three of these in the console, using Object.getPrototypeOf()-->
 
 ```js 
@@ -144,7 +139,6 @@ function Flower() {
  }
 
 var tulip = new Flower(); // Factory for shells
-var rose = Object.create(tulip); //Give me your shell.
 ```
 
 Once we start using an object, we start by asking if the object itself has changed or created a property or 
@@ -184,8 +178,6 @@ function Flower() {
 Flower.prototype = { bloom: function(){ console.log("Look at me")}  }; 
 
 var rose = new Flower(); // Factory for shells
-var tulip = Object.create(rose); //Give me your shell.
-tulip.color = "yellow"
 ```
 
 Where are the following things defined? If it is defined in the object, say the object name. If it's 
@@ -193,13 +185,11 @@ defined in the prototype list objectName.prototype. If it is defined in the prot
 
 * rose.bloom? `=> rose.prototype`
 * rose.color?
-* tulip.color? 
-* tulip.petals?
-* tulip.bloom?
 * daisy.color?
 * daisy.watered?
 * rose.watered?
-* tulip.watered?
+* daisy.toString?
+* rose.toString?
 
 <!--Actually 2:39 -->
 <!-- 12:25 5 minutes -->
@@ -217,6 +207,10 @@ in your own words, without using any of the words in the list:
 - Inheritance
 
 <!--1:30 -->
+
+### `Object.create()`
+
+There is one more significant way to create objects in Javascript, and it has some interesting properties in regards to inheritance.  It is called `Object.create()`, and [this link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) will explain it in more detail.
 
 ## Lab
 
