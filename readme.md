@@ -5,6 +5,7 @@ Market: SF
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
+<!--11:50 WDI4 -->
 <!--Actually 1:35 -->
 <!--11:40 5 minutes -->
 
@@ -39,6 +40,7 @@ Market: SF
 
 <!--Actually 1:40 -->
 <!--11:45 5 minutes -->
+<!--11:54 WDI4 -->
 
 ## What is OOP?
 Object Oriented Programming(OOP) is one of the big progamming paradigms. It stretches across languages, 
@@ -76,6 +78,7 @@ objects in the LOTR lab?"
 
 Let's look at what [I came up with](https://github.com/den-materials/dom-manipulation-lotr-lab/blob/oop-refactor/solution-code/app/scripts/fellowship.js).
 
+<!--12:06 WDI4-->
 <!--12:00 10 minutes -->
 
 ### Encapsulation
@@ -100,6 +103,7 @@ With these examples in mind, we can define [**encapsulation**](https://en.wikipe
 
 <!--1:54 -->
 
+<!--12:10 WDI4 -->
 <!--12:10 10 minutes -->
 
 ### Inheritance and Polymorphism
@@ -184,12 +188,16 @@ Where are the following things defined? If it is defined in the object, say the 
 defined in the prototype list objectName.prototype. If it is defined in the prototype's prototype write objectName.prototype.prototype, etc. If it's not defined how many prototypes did you need to check?
 
 * rose.bloom? `=> rose.prototype`
+* daisy.bloom?
 * rose.color?
 * daisy.color?
 * daisy.watered?
 * rose.watered?
 * daisy.toString?
 * rose.toString?
+
+<!--WDI4 12:24 when turning over to devs -->
+<!--WDI4 12:32 -->
 
 <!--Actually 2:39 -->
 <!-- 12:25 5 minutes -->
