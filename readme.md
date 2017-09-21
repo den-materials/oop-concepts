@@ -7,6 +7,7 @@ Market: SF
 
 <!--11:50 WDI4 -->
 <!--Actually 1:35 -->
+<!--WDI5 11:33 -->
 <!--11:40 5 minutes -->
 
 <!--Opening: OK, so we just dove really deeply into objects in JS and Object-Oriented Programming.  Now we're going to pull back and explain this on a more conceptual level.  So without further ado, let's start putting some names to all of those things we talked about earlier.-->
@@ -78,6 +79,7 @@ objects in the LOTR lab?"
 
 Let's look at what [I came up with](https://github.com/den-materials/dom-manipulation-lotr-lab/blob/oop-refactor/solution-code/app/scripts/fellowship.js).
 
+<!--11:48 WDI5 -->
 <!--12:06 WDI4-->
 <!--12:00 10 minutes -->
 
@@ -103,6 +105,7 @@ With these examples in mind, we can define [**encapsulation**](https://en.wikipe
 
 <!--1:54 -->
 
+<!--WDI5 11:51 -->
 <!--12:10 WDI4 -->
 <!--12:10 10 minutes -->
 
@@ -200,6 +203,7 @@ defined in the prototype list objectName.prototype. If it is defined in the prot
 <!--WDI4 12:32 -->
 
 <!--Actually 2:39 -->
+<!--WDI5 12:20 after describing the prototype chain with Cars-->
 <!-- 12:25 5 minutes -->
 
 ### Vocab Check
@@ -213,6 +217,8 @@ in your own words, without using any of the words in the list:
 - Instance
 - Encapsulation
 - Inheritance
+
+<!--WDI5 12:28 -->
 
 <!--1:30 -->
 
