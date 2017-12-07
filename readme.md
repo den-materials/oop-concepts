@@ -5,6 +5,7 @@ Market: SF
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
+<!--WDI6 11:46 -->
 <!--11:50 WDI4 -->
 <!--Actually 1:35 -->
 <!--WDI5 11:33 -->
@@ -108,6 +109,7 @@ With these examples in mind, we can define [**encapsulation**](https://en.wikipe
 <!--WDI5 11:51 -->
 <!--12:10 WDI4 -->
 <!--12:10 10 minutes -->
+<!--WDI6 12:02 -->
 
 ### Inheritance and Polymorphism
 
@@ -201,6 +203,7 @@ defined in the prototype list objectName.prototype. If it is defined in the prot
 
 <!--WDI4 12:24 when turning over to devs -->
 <!--WDI4 12:32 -->
+<!--WDI6 12:21 -->
 
 <!--Actually 2:39 -->
 <!--WDI5 12:20 after describing the prototype chain with Cars-->
@@ -225,6 +228,8 @@ in your own words, without using any of the words in the list:
 ### `Object.create()`
 
 There is one more significant way to create objects in Javascript, and it has some interesting properties in regards to inheritance.  It is called `Object.create()`, and [this link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) will explain it in more detail.
+
+<!--WDI6 12:38 -->
 
 ## Lab
 
